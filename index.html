@@ -55,6 +55,7 @@
   left: 0 !important;
   transform: scale(1) !important;
   object-position: center;
+  object-fit: cover;
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -299,7 +300,7 @@
         .btn-outline-02
         {
           margin-top: min(10vw,5vh);
-          width: min(25vw,18vh);
+          width: min(25vw,14vh);
           height: 7.5%;
           border: 1.5px solid #B30F18;
           display: flex;
@@ -313,7 +314,6 @@
         .primary-btn-02
         {
              background-color: #B30F18;
-            
              color:white;
              font-family: 'Lato', sans-serif;
              font-weight: 900;
@@ -444,8 +444,8 @@
 
 
                 <div class="social-icons">
-                  <a href="" class="insta-03"><img src="insta-white.png" alt="insta"  /></a>
-                  <a href="" class="fb-03"><img src="facebook-white.png" alt="fb"  /></a>
+                  <a href="#!" class="insta-03"><img src="insta-white.png" alt="insta"  /></a>
+                  <a href="#!" class="fb-03"><img src="facebook-white.png" alt="fb"  /></a>
                 </div>
 
 
@@ -504,7 +504,7 @@
             slideImages: images,
 
             backgroundDisplacementSprite:
-                "https://raw.githubusercontent.com/ShaifArfan/Displacement-images/main/Hover%20Effect%20-%20Robin%20Dela/2.jpg",
+                "https://raw.githubusercontent.com/ShaifArfan/Displacement-images/main/Hover%20Effect%20-%20Robin%20Dela/4.png",
             cursorDisplacementSprite:
                 "https://raw.githubusercontent.com/ShaifArfan/Displacement-images/main/Hover%20Effect%20-%20Robin%20Dela/15.jpg",
             cursorScaleIntensity: 1.6,
@@ -516,7 +516,7 @@
 
             slideTransitionDuration: 0.8,
             transitionScaleIntensity: 20,
-            transitionScaleAmplitude: 850,
+            transitionScaleAmplitude: 660,
 
             nav: true,
             navElement: ".main-nav",
@@ -537,14 +537,14 @@
 
 
          var swiper = new Swiper('.swiper-container', {
-             effect: 'cube',
+             /*effect: 'cube',
              grabCursor: true,
              cubeEffect: {
               shadow: false,
               slideShadows: false,
               shadowOffset: 20,
               shadowScale: 0.94,
-            }, 
+            }, */
             noSwiping: false,
             speed: 1400,
             allowTouchMove: false,
@@ -597,6 +597,7 @@
                 autoAlpha: 1, 
                 display:'block',
             },'-= 1.2')
+
 
 
 
