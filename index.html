@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofa Company | @rohit_virkud</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Lato:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Comfortaa', cursive;
+            /*font-family: 'Lato', sans-serif;*/
+        }
+        a{
+    		 color: inherit; 
+    		 text-decoration: none;
+        }
+        
+       
+
+        
+    .rgbKineticSlider {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+      overflow: hidden;
+    }
+
+   
+    
+    canvas {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0 !important;
+  left: 0 !important;
+  transform: scale(1) !important;
+  object-position: center;
+  background-size: cover;
+  background-position: center;
+}
+        
+
+      .slide-01
+        {
+          /*background: url('background idea.png') no-repeat;*/
+          background-position: center;
+          background-size: cover;
+          overflow: hidden;
+        }
+
+
+        
+        
+       
+        .swiper-container
+        {
+            position:absolute;
+            top:0;
+            left:0;
+            width: 100%;
+		        height: 100%;
+            overflow: hidden;
+        }
+       
+        .swiper-slide
+        {
+           /* background-size:cover;
+            background-position: center;*/
+            box-sizing: border-box;
+            color: transparent;
+            
+        }
+        .my-wrapper
+        {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+        }
+        .my-container
+        {
+            width: 90%;
+            height: 100%;
+            background-color: transparent;
+        }
+        .navbar
+        {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+        }
+        .logo
+        {
+            width: min(46vw,24vh);
+            height: 10%;
+            margin-top: 3%;
+        }
+
+        .share
+        {
+            width: min(15.625vw,8vh);
+            height: min(15.625vw,8vh);
+            position: absolute;
+            top: 0;
+            right: 0;
+           
+        }
+        .heading
+        {
+          width: 60vw;
+            margin-top: min(20vw,12vh);
+            font-size: min(6vw,3vh);
+            color:#B30F18;
+        }
+        .subhead
+        {
+            margin-top: min(2.5vw,2vh);
+            font-size: min(3vw,2vh);
+            color:#000000;
+
+        }
+        .contact-container
+        {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin-top: min(4vw,2vh);
+        }
+        .contact-container p
+        {
+            color: black;
+            margin-left: min(5vw,2.5vh);
+            font-size: min(4vw,2vh);
+        }
+        .contact-container img
+        {
+            width: min(7vw,3.5vh);
+            height: 6%;
+        }
+        .mg-top
+        {
+            margin-top: min(10vw,6vh);
+        }
+        .mg-bottom
+        {
+            margin-bottom: min(13vw,6.5vh);
+        }
+        .btn-outline
+        {
+          width: min(40vw,20vh);
+          height: 8%;
+          border: 1.5px solid #B30F18;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-shrink: 0;
+          color:white;
+          font-size: min(3vw,1.5vh);
+        }
+
+        .primary-btn
+        {
+             background-color: #B30F18;
+             color:white;
+             font-family: 'Lato', sans-serif;
+             font-weight: 900;
+             padding-top: min(3.438vw,1.8vh);
+             padding-bottom:  min(3.438vw,1.8vh);
+             padding-left: min(3.125vw,1.5vh);
+             padding-right: min(3.125vw,1.5vh);
+             font-size: min(3vw,1.5vh);
+             
+        } 
+
+
+
+        .next-icon
+        {
+            position: absolute;
+            width: min(15vw,8vh);
+            height: min(15vw,8vh);
+            top: 96%;
+            right: 0;
+
+        }
+
+        /* Share Screen Two */
+        .slide-02
+        {
+          /*background: url('background-slide-02.png') no-repeat;*/
+          background-position: center;
+          background-size: cover;
+         
+        }
+
+
+        .fb
+        {
+          margin-top: min(7vw,3vh);
+          width: min(10vw,5vh);
+          height: 5%;
+        }
+        .prev-icon
+        {
+            position: absolute;
+            width: min(15vw,8vh);
+            height: min(15vw,8vh);
+            top: 96%;
+            left: 0;
+
+        }
+        
+
+        /* Share Screen Three */
+
+        .slide-03
+        {
+          /*background: url('3rdBackground.png') no-repeat;*/
+          background-position: center;
+          background-size: cover;
+        }
+
+        .slide-03-logo
+        {
+          margin-top: min(16vw,8vh);
+          width: min(50vw,30vh);
+          height: 8%;
+        }
+        .subhead-03
+        {
+           color: white;
+           font-family: 'Lato', sans-serif;
+           font-weight: 400;
+           width: 60vw;
+           margin-top: min(8vw,7vh);
+           line-height: min(5vw,2.5vh);
+        }
+
+        .social-icons
+        {
+          display: flex;
+          margin-top: min(10vw,6vh);
+
+        }
+        .fb-03
+        {
+          width: min(3vw,1.5vh);
+          height: 3%;
+          margin-left: min(4vw,2vh);
+        }
+        .insta-03
+        {
+          width: min(6.5vw,3.5vh);
+          height: 4%;
+
+        }
+        .fb-03 img
+        {
+         
+          width: min(3vw,1.5vh);
+          height: 3%;
+        }
+        .insta-03 img
+        {
+          width: min(6.5vw,3.5vh);
+          height: 4%;
+
+        }
+
+        .btn-outline-02
+        {
+          margin-top: min(10vw,5vh);
+          width: min(25vw,18vh);
+          height: 7.5%;
+          border: 1.5px solid #B30F18;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-shrink: 0;
+          color: white;
+          font-size: min(3vw,1.5vh);
+        }
+
+        .primary-btn-02
+        {
+             background-color: #B30F18;
+            
+             color:white;
+             font-family: 'Lato', sans-serif;
+             font-weight: 900;
+             padding-top: min(3vw,1.8vh);
+             padding-bottom:  min(3vw,1.8vh);
+             padding-left: min(3vw,1.5vh);
+             padding-right: min(3vw,1.5vh);
+             font-size: min(3vw,1.5vh);
+             
+        } 
+
+
+
+
+
+        
+    
+    </style>
+</head>
+<body>
+   <div class="slider">
+    <div id="rgbKineticSlider" class="rgbKineticSlider"></div>
+    <!--<nav>
+        <a href="#" class="main-nav prev swiper-button-prev" data-nav="previous">Prev <span></span></a>
+        <a href="#" class="main-nav next swiper-button-next" data-nav="next">Next <span></span></a>
+    </nav> -->
+    </div>
+
+
+    <div class="swiper-container">
+        
+        
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slide-01 noSwipingClass" id="s1">
+            <div class="my-wrapper">
+                <img src="share.png" class="share"/>  
+                <div class="my-container">
+                   <div class="navbar">
+   
+                        <img src="sofa-logo.png" class="logo"/>
+                        
+
+                   </div>
+
+                   <h1 class="heading">ΕΥΑΓΓΕΛΟΣ ΣΥΛΑΣ ΚΟΥΤΣΟΧΡΗΣΤΟΣ</h1>
+                   <p class="subhead">Πρόεδρος και Διευθύνων Σύμβουλος</p>
+
+                   
+                   <a href="#!"  class="contact-container mg-top">
+                       <img src="mobile icon.png"  alt="mobile-icon"/>
+                       <p>+30 6932603100</p>
+                   </a>
+
+
+                   <a href="#!"   class="contact-container">
+                    <img src="mobile icon.png" alt="mobile-icon"/>
+                    <p>+30 6988077777</p>
+                   </a>
+
+                   <a href="#!"   class="contact-container">
+                    <img src="home icon.png" alt="home-icon"/>
+                    <p>+30 210 3424651</p>
+                   </a>
+
+                   <a href="#!"   class="contact-container">
+                    <img src="email icon.png" alt="email-icon"/>
+                    <p>silasvagelis@hotmail.com</p>
+                   </a>
+
+                   <a href="#!"   class="contact-container">
+                    <img src="web icon.png" alt="web-icon"/>
+                    <p>www.silas-koutsochristou.com</p>
+                   </a>
+
+                   <a href="#!"  class="contact-container">
+                    <img src="web icon.png"  alt="web-icon"/>
+                    <p>www.housedecor.gr</p>
+                   </a>
+
+                   
+                   <a href="#!"  class="contact-container mg-bottom">
+                    <img src="location icon.png"  alt="location-icon"/>
+                    <p>Π.Ράλλη 37A, Ταύρος, 177-78 </p>
+                   </a>
+
+                   <div class="btn-outline">
+                     <a href="#!" class="primary-btn">
+                      SAVE MY CONTACTS
+                     </a>  
+                   </div> 
+        
+              </div> <!-- my container --->
+              <img src="backarrow.png" alt="next-arrow-icon" data-nav="next" class="main-nav next  swiper-button-next next-icon"  onclick="firstScreenNextBtn()" />
+            </div> <!-- my wrapper --->
+          </div>  <!-- swiper slide --->
+          
+          
+          <div class="swiper-slide slide-02">
+              <!-- <img src="left.png" alt="next-arrow-icon" class="main-nav prev swiper-button-prev  swiper-button-prev next-icon" /> -->
+
+              <div class="my-wrapper">
+              
+                <div class="my-container">
+                <h1 class="heading" style="width: 80vw;">ΕΠΙΠΛΟ – ΔΙΑΚΟΣΜΗΣΗ  ΕΠΑΓΓΕΛΜΑΤΙΚΟΣ ΕΞΟΠΛΙΣΜΟΣ</h1>
+                <p class="subhead"  style="width: 70vw;">Η εταιρεία Ν.ΣΥΛΑΣ-Α.ΚΟΥΤΣΟΧΡΗΣΤΟΥ Α.Ε. ξεκίνησε το 1984 με κατασκευή επίπλων για ξενοδοχεία και ενοικιαζόμενα δωμάτια. Παράλληλα έφτιαχνε έπιπλα παιδικά και έπιπλα για κομμωτήρια.</p>
+
+                <a href="#!"><img src="facebook.png" class="fb"/></a>
+               </div> <!-- end of container -->
+    
+            <img src="backarrowtwo.png" alt="next-arrow-icon" data-nav="previous"  class="main-nav prev swiper-button-prev  prev-icon"  /> 
+
+            <img src="backarrow.png" alt="next-arrow-icon" data-nav="next" class="main-nav next swiper-button-next  next-icon" />
+              
+
+            </div> <!-- end of wrapper -->
+
+          </div>
+
+          <div class="swiper-slide slide-03">
+            
+            <div class="my-wrapper">
+              
+                <div class="my-container">
+
+                <img src="house-decor-logo.png" alt="logo" class="slide-03-logo" />
+
+                <p class="subhead subhead-03">Η Διακόσμηση ολοκληρώνει το concept ενός χώρου, ως μια φυσική συνέχεια της επίπλωσης.Το καλαίσθητο design μπορεί να αλλάξει την όψη του και στο HouseDecor αυτό μπορεί να γίνει πραγματικότητα.</p>
+
+
+                <div class="social-icons">
+                  <a href="" class="insta-03"><img src="insta-white.png" alt="insta"  /></a>
+                  <a href="" class="fb-03"><img src="facebook-white.png" alt="fb"  /></a>
+                </div>
+
+
+                <div class="btn-outline-02">
+                     <a href="#!" class="primary-btn-02">
+                      SHOP NOW
+                     </a>  
+                </div> 
+
+
+
+
+                </div> <!-- end of container -->  
+
+                <img src="backarrowtwo.png" alt="prev-arrow-icon" data-nav="previous" class="main-nav prev swiper-button-prev  swiper-button-prev prev-icon"  /> 
+ 
+            </div> <!-- end of wrapper -->
+              
+
+
+           
+          </div>
+
+
+     
+     <!-- TweenMax -->
+     <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/TweenMax.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/imagesLoaded.pkgd.min.js"></script>
+
+     <!-- Pixi JS -->
+     <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/pixi.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/pixi-filters.min.js"></script>
+
+     <!-- Slider Plugin -->
+     <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/rgbKineticSlider.js"></script>
+
+     <!-- swiper js  ----> 
+     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+     
+     <script>
+
+
+      
+        
+   const images = [
+     "https://raw.githubusercontent.com/rohit-virkud/distortion/main/background%20idea.png",
+     "https://raw.githubusercontent.com/rohit-virkud/distortion/main/background-slide-02.png",
+     "https://raw.githubusercontent.com/rohit-virkud/distortion/main/3rdBackground.png",
+     
+    ];
+         
+     
+    
+
+        rgbKineticSlider = new rgbKineticSlider({
+            slideImages: images,
+
+            backgroundDisplacementSprite:
+                "https://raw.githubusercontent.com/ShaifArfan/Displacement-images/main/Hover%20Effect%20-%20Robin%20Dela/11.jpg",
+            cursorDisplacementSprite:
+                "https://raw.githubusercontent.com/ShaifArfan/Displacement-images/main/Hover%20Effect%20-%20Robin%20Dela/15.jpg",
+            cursorScaleIntensity: 1.6,
+            cursorMomentum: 1.14,
+
+            swipe: false,
+            swipeDistance: window.innerWidth * 0.4,
+            swipeScaleIntensity: 2,
+
+            slideTransitionDuration: 0.8,
+            transitionScaleIntensity: 120,
+            transitionScaleAmplitude: 360,
+
+            nav: true,
+            navElement: ".main-nav",
+
+            imagesRgbEffect: false,
+            imagesRgbIntensity: 4,
+            navImagesRgbIntensity: 120,
+        });
+
+     
+
+       
+
+
+
+
+
+
+
+         var swiper = new Swiper('.swiper-container', {
+             effect: 'cube',
+             grabCursor: true,
+             cubeEffect: {
+              shadow: false,
+              slideShadows: false,
+              shadowOffset: 20,
+              shadowScale: 0.94,
+            }, 
+            noSwiping: false,
+            speed: 1400,
+            allowTouchMove: false,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            });
+
+
+
+
+
+         
+
+       function firstScreenNextBtn()
+        {
+           t1.play(0);
+
+        }
+
+        const t1 = new TimelineLite({paused:true});
+
+        t1.fromTo('.rgbKineticSlider',5,{
+                scale: 1.8,
+                x: 50,
+                ease: Power2.easeOut,
+            },{
+                x: 0,
+                scale: 1,
+            },'-= 1.2')
+          .fromTo('.prev-icon',1,{
+                autoAlpha: 0, 
+                display:'none',
+                opacity: 0,
+                ease: Power2.easeOut,
+            },{
+
+                autoAlpha: 1, 
+                display:'block',
+                opacity: 1,
+            })
+          .fromTo('.next-icon',1,{
+                opacity: 0,
+                autoAlpha: 0, 
+                display:'none',
+                ease: Power2.easeOut,
+            },{
+                opacity: 1,
+                autoAlpha: 1, 
+                display:'block',
+            },'-= 1.2')
+
+
+
+        t1.play(0);
+
+
+
+
+
+         swiper.on('slideChange', function(e){
+           
+           t1.play(0);
+          })
+            
+
+     </script>
+</body>
+</html>
